@@ -1,0 +1,238 @@
+body{
+    background-color: rgb(244, 234, 234);
+    margin: 0;
+    padding: 0;
+}
+.rushabh{
+   border-radius: 60%;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    background-color:azure;
+    margin:0;
+    padding-top: 0;
+}
+.navigation{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    font-size: 30px;
+    align-items: center;
+}
+
+
+h1{
+    font-size:50px;
+    font-weight:bold;
+    color:rgb(28, 26, 26);
+    margin: 0;
+    padding: 0;
+    font-family: sacramento;
+}
+
+h2{
+    font-size:50px;
+    font-family: sacramento;
+    margin: 0;
+    padding: 0;
+}
+#header{
+    background-color:azure;
+    text-align: center;
+    padding: 5px;
+}
+
+#education{
+    text-align: center;
+    margin: 20px;
+}
+
+p{
+    font-size: 20px;
+    color:rgb(240, 244, 240);
+    margin: 0;
+    padding: 5px;
+}
+.image-holder{
+    width: 200px;
+    height: 200px;
+}
+.image-holder img{
+    width: 100%;
+    height: 100%;
+}
+
+.education{
+    display: flex;
+    justify-content: space-evenly;
+align-items: center;
+margin-top:20px;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.email{
+    margin-top:0;
+    font-size: 18px;
+}
+
+
+.info{
+    width: 60%;
+    margin: 30px ;
+    line-height: 2;
+    float: right;   
+}
+h2{
+    color: rgb(228, 155, 19);
+    font-size: 42px;
+    margin-top: 30px;
+}
+.web_development{
+    width: 200px;
+    position: relative;
+    margin-top:30px;
+    right:5%;
+    border-radius: 60%;
+}
+
+h3{
+ color:rgb(232, 43, 112);
+position: relative;
+}
+.skill-row{
+    margin-top: 50px;
+    text-align: center;
+    width: 70%;
+    margin: 30px auto;
+}
+.rrr{
+    width: 70%;
+        line-height: 2; 
+    display: inline-block;
+}
+.blockchain{
+    margin-top: 30px;
+    width: 70%;
+    margin: 30px auto;
+}
+#blockchain{
+    width: 200px;
+    position: relative;
+    border-radius: 60%;
+    margin-top: 40px;
+}
+.rrr2{
+    width: 70%;
+    margin: 20px ;
+    line-height: 2;
+    float: left;
+}
+
+.skill{
+    text-align: center;
+display: flex;
+flex-direction: column;
+border: 2px solid black;
+}
+.profile{
+    width: 70%;
+}
+
+.info{
+    width: 60%;
+    margin: 30px ;
+    line-height: 2;
+    float: right;   
+}
+h2{
+    color: rgb(228, 155, 19);
+    font-size: 42px;
+    margin-top: 30px;
+}
+.web_development{
+    width: 200px;
+    position: relative;
+    margin-top:30px;
+    right:5%;
+    border-radius: 60%;
+}
+
+#contact-us{
+    text-align: center;
+    margin: 100px;
+}
+.myButton {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+    margin-top: 10px;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.footer{
+    display: flex;
+    background-color:powderblue;
+    width: 100%;
+    height:200px;
+    margin-top: 30px;
+    /* display: inline-block; */
+    border: 2px solid black;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.instragram{
+    width: 100px;
+    right: 200px;
+    /* margin: auto 50px;  */
+    border: 2px solid black;
+
+}
+.facebook{
+    width: 100px;
+/* margin: auto 50px; */
+border: 2px solid black;
+}
+.whatsapp{
+    width: 120px;
+    left: 250px;
+    /* margin: auto 50px; */
+    border: 2px solid black;
+
+}
+.twitter{
+    width: 100px;
+    left: 400px;
+    /* margin: auto 50px; */
+    border: 2px solid black;
+
+}
+.reddit{
+    width: 100px;
+    right: 150px;
+    /* margin: auto 50px; */
+    border: 2px solid black;
+
+}

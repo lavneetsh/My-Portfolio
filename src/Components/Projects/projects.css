@@ -1,0 +1,42 @@
+.d-block{
+    align-items: center;
+    /* color: black; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width:30%;
+    height: 30%;
+    margin:  0 auto 20px auto ;
+    /* padding: 10px?; */
+}
+.carousel-indicators {
+    bottom: 160px !important;
+}
+#projects{
+    height:98vh;
+    background-color: rgb(130,130,130);
+}
+
+#projects h2{
+    color:white;
+}
+#projects h3{
+    color:rgb(252, 251, 251);
+    margin: 0 auto;
+    padding: 0 auto;
+    /* padding-bottom: 30px; */
+    /* margin-bottom:-110px ; */
+}
+#projects p{
+    color:rgb(245, 251, 245);
+    /* padding-bottom: -60px; */
+}
+
+.carousel-caption{
+    position:relative !important;
+    right: 0% !important;
+    left: 0% !important;
+    padding-top:4.5rem !important;
+    padding-bottom:2.25rem !important
+
+} 
