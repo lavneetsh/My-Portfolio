@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/My-Portfolio/static/css/main.0f5e78c8.css",
+    "main.js": "/My-Portfolio/static/js/main.ed514b9a.js",
+    "static/js/845.31622dd7.chunk.js": "/My-Portfolio/static/js/845.31622dd7.chunk.js",
+    "static/js/787.1ed0c42c.chunk.js": "/My-Portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/school-website.jpg": "/My-Portfolio/static/media/school-website.ac85355ff5ee35871320.jpg",
+    "static/media/movie-search.jpg": "/My-Portfolio/static/media/movie-search.23c93890d21ea58259e8.jpg",
+    "static/media/MERN.jpg": "/My-Portfolio/static/media/MERN.643eb890accc363e7bd6.jpg",
+    "static/media/remine.jpg": "/My-Portfolio/static/media/remine.effcca5025b9079985bc.jpg",
+    "static/media/bike-rental.jpg": "/My-Portfolio/static/media/bike-rental.c092f9cb0427e1dd5c48.jpg",
+    "static/media/higher-college.jpg": "/My-Portfolio/static/media/higher-college.d8403a2953a133c591cd.jpg",
+    "static/media/Dice.jpg": "/My-Portfolio/static/media/Dice.cede7235f47542b05875.jpg",
+    "static/media/glassesimoji.png": "/My-Portfolio/static/media/glassesimoji.a08bdab12e8eb56a6874.png",
+    "static/media/school.png": "/My-Portfolio/static/media/school.78adc2c1f35a786a4c8b.png",
+    "static/media/quiz.jpg": "/My-Portfolio/static/media/quiz.2bc3c7136e48b182bbd0.jpg",
+    "static/media/Mouse-Click-00-c-FesliyanStudios.com.mp3": "/My-Portfolio/static/media/Mouse-Click-00-c-FesliyanStudios.com.90282a085ad3d629e7cf.mp3",
+    "static/media/programmer.png": "/My-Portfolio/static/media/programmer.20058679e807a1e865f2.png",
+    "static/media/contact.png": "/My-Portfolio/static/media/contact.a3aa2593fa491a18d928.png",
+    "static/media/cricket.jpg": "/My-Portfolio/static/media/cricket.5511bdcadfd1a9c6300e.jpg",
+    "static/media/blockchain.jpg": "/My-Portfolio/static/media/blockchain.fae636a7d8b4025116ed.jpg",
+    "static/media/heartemoji.png": "/My-Portfolio/static/media/heartemoji.26b1b6ed5e0e44083b28.png",
+    "static/media/wave.png": "/My-Portfolio/static/media/wave.fdfef4069ad90f610990.png",
+    "static/media/Vector2.png": "/My-Portfolio/static/media/Vector2.28db5bfd58081dd1df1b.png",
+    "static/media/glasses.png": "/My-Portfolio/static/media/glasses.71d7c1b0ff0b870a9d7d.png",
+    "static/media/college.png": "/My-Portfolio/static/media/college.911b6cc2e92f54c495ec.png",
+    "static/media/reddit.jpg": "/My-Portfolio/static/media/reddit.24e80ccde7347e478533.jpg",
+    "index.html": "/My-Portfolio/index.html",
+    "main.0f5e78c8.css.map": "/My-Portfolio/static/css/main.0f5e78c8.css.map",
+    "main.ed514b9a.js.map": "/My-Portfolio/static/js/main.ed514b9a.js.map",
+    "845.31622dd7.chunk.js.map": "/My-Portfolio/static/js/845.31622dd7.chunk.js.map",
+    "787.1ed0c42c.chunk.js.map": "/My-Portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f5e78c8.css",
+    "static/js/main.ed514b9a.js"
+  ]
+}
