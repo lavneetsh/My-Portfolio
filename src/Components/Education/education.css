@@ -1,0 +1,78 @@
+#education {
+  text-align: center;
+  /* margin: 200px 0; */
+  width: 100%;
+  background-color: rgb(246, 252, 252);
+  height: 100vh;
+}
+
+#education h2 {
+  font-size: 60px;
+  font-family: "Sacramento", cursive;
+  padding: 2rem 0 1rem 0;
+  margin: 2rem 0 0 0;
+  color: rgb(3, 222, 251);
+}
+
+p {
+  font-size: 20px;
+  color: rgb(17, 17, 16);
+  margin: 0;
+  padding: 5px;
+}
+.image-holder {
+  /* width: 250px; */
+  height: 250px;
+}
+.image-holder img {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.education {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+/* media Query */
+@media screen and (max-width: 480px) {
+  #education {
+    text-align: center;
+    /* margin: 200px 0; */
+    width: 100%;
+    background-color: rgb(246, 252, 252);
+    height: 70vh;
+  }
+
+  #education h2 {
+    font-size: 40px;
+    font-family: "Sacramento", cursive;
+    padding: 1rem 0 0.5rem 0;
+    margin: 1rem 0 0 0;
+    color: rgb(3, 222, 251);
+  }
+
+  p {
+    font-size: 13px;
+    color: rgb(17, 17, 16);
+    margin: 0;
+    padding: 5px;
+  }
+  .image-holder {
+    /* width: 250px; */
+    height: 150px;
+  }
+  .image-holder img {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+}

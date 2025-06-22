@@ -1,0 +1,149 @@
+.contact-form {
+  padding: 0 12rem 0 12rem;
+  display: flex;
+  justify-content: space-between;
+  height: 70vh;
+  margin-top: 1rem;
+  /* scroll */
+  padding-top: 1rem;
+}
+.contact-image {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.contact-image .contact-image-holder {
+  width: 200px;
+  height: 100px;
+}
+.contact-image .contact-image-holder img {
+  width: 100%;
+  height: 100%;
+}
+
+.c-right {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  flex: 1;
+}
+
+.c-right > form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.c-right .form input,
+textarea {
+  width: 20rem;
+  border: 2px solid rgb(245, 148, 30);
+}
+
+.c-right .user {
+  width: 25rem !important;
+  height: 3rem;
+  padding: 0.3em;
+  outline: none;
+  /* border: none; */
+  border: 2px solid orange;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+textarea {
+  height: 8rem !important;
+}
+
+.c-blur1 {
+  top: 1rem;
+  left: 8rem;
+}
+
+@media screen and (max-width: 480px) {
+  .contact-form {
+    padding: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: 50rem;
+  }
+  .c-right .user {
+    width: 16rem;
+  }
+
+  .contact-form {
+    /* padding: 0 12rem 0 12rem; */
+    display: flex;
+    justify-content: space-between;
+    height: 95vh;
+    margin-top: 1rem;
+    /* scroll */
+    padding-top: 1rem;
+  }
+  .contact-image {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  .contact-image .contact-image-holder {
+    width: 200px;
+    height: 100px;
+  }
+  .contact-image .contact-image-holder img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .c-right {
+    display: flex;
+    /* justify-content: flex-end; */
+    position: relative;
+    flex: 1;
+  }
+
+  .c-right > form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .c-right .form input,
+  textarea {
+    width: 20rem !important;
+    border: 2px solid rgb(245, 148, 30);
+  }
+
+  .c-right .user {
+    width: 20rem !important;
+    height: 3rem;
+    padding: 0.3em;
+    outline: none;
+    /* border: none; */
+    border: 2px solid orange;
+    border-radius: 8px;
+    font-size: 20px;
+  }
+
+  textarea {
+    height: 8rem !important;
+  }
+
+  .c-blur1 {
+    top: 1rem;
+    left: 8rem;
+  }
+}
