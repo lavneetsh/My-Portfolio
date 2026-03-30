@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lavneet Sharma | Premium Developer Portfolio</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#00dbe9",
+              "primary": "#dbfcff",
+              "on-background": "#e5e2e1",
+              "on-error": "#690005",
+              "on-primary-fixed-variant": "#004f54",
+              "on-error-container": "#ffdad6",
+              "surface-container-lowest": "#0e0e0e",
+              "inverse-primary": "#006970",
+              "surface-bright": "#3a3939",
+              "inverse-surface": "#e5e2e1",
+              "on-tertiary-fixed-variant": "#474646",
+              "secondary-fixed-dim": "#d0bcff",
+              "on-secondary-fixed-variant": "#5516be",
+              "secondary": "#d0bcff",
+              "outline-variant": "#3b494b",
+              "error": "#ffb4ab",
+              "surface-dim": "#131313",
+              "outline": "#849495",
+              "primary-fixed": "#7df4ff",
+              "on-surface-variant": "#b9cacb",
+              "on-primary-container": "#006970",
+              "secondary-fixed": "#e9ddff",
+              "tertiary-container": "#dcd9d8",
+              "on-secondary": "#3c0091",
+              "secondary-container": "#571bc1",
+              "surface-tint": "#00dbe9",
+              "tertiary": "#f9f5f5",
+              "surface-container-low": "#1c1b1b",
+              "surface": "#131313",
+              "on-tertiary-container": "#605e5e",
+              "background": "#131313",
+              "on-tertiary-fixed": "#1c1b1b",
+              "surface-container-high": "#2a2a2a",
+              "tertiary-fixed": "#e5e2e1",
+              "surface-container-highest": "#353534",
+              "on-secondary-fixed": "#23005c",
+              "surface-variant": "#353534",
+              "primary-container": "#00f0ff",
+              "error-container": "#93000a",
+              "on-surface": "#e5e2e1",
+              "on-primary": "#00363a",
+              "surface-container": "#201f1f",
+              "on-tertiary": "#313030",
+              "tertiary-fixed-dim": "#c9c6c5",
+              "on-secondary-container": "#c4abff",
+              "on-primary-fixed": "#002022",
+              "inverse-on-surface": "#313030"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(59, 73, 75, 0.2);
+        }
+        .neon-glow:hover {
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+
+        /* Scroll Animation Styles */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl rounded-2xl border border-white/10 bg-surface-variant/40 backdrop-blur-xl flex justify-between items-center px-8 py-4 z-50 backdrop-blur-md shadow-2xl shadow-cyan-500/10 shadow-[0_0_20px_rgba(0,240,255,0.15)]">
+<div class="text-xl font-bold tracking-tighter text-cyan-400 font-headline">Lavneet Sharma</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1 font-label" href="#hero">Hero</a>
+<a class="text-slate-400 hover:text-white transition-colors font-label" href="#about">About</a>
+<a class="text-slate-400 hover:text-white transition-colors font-label" href="#skills">Skills</a>
+<a class="text-slate-400 hover:text-white transition-colors font-label" href="#projects">Projects</a>
+<a class="text-slate-400 hover:text-white transition-colors font-label" href="#contact">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-xl font-bold hover:scale-105 transition-all duration-300">Resume</button>
+</nav>
+<main class="relative">
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col justify-center items-center px-6 pt-24 relative overflow-hidden reveal" id="hero">
+<!-- Decorative Blobs -->
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary-container/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary-container/10 rounded-full blur-[120px]"></div>
+<div class="max-w-5xl w-full text-center z-10">
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 leading-none uppercase">
+                    BUILDING SCALABLE <br/>
+<span class="text-primary-container">Full Stack Solutions</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                    Computer Science graduate with experience building scalable SaaS and full-stack applications using MERN stack. Strong in system design, authentication, real-time systems, and cloud integrations (AWS, Stripe).
+                </p>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold flex items-center gap-2 group transition-all neon-glow" href="#projects">
+                        View Projects
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 border border-outline-variant/20">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-mono text-primary">MERN | SaaS | Architecture</span>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 px-6 bg-surface-container-low reveal" id="about">
+<div class="max-w-7xl mx-auto asymmetric-grid">
+<div class="col-span-12 md:col-span-7 flex flex-col justify-center">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-8 flex items-center gap-4">
+<span class="text-primary-container">01.</span> THE ARCHITECT
+                    </h2>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-6">
+                        I specialize in crafting robust <span class="text-white font-medium">SaaS platforms</span> that handle complex business logic with ease. My approach combines rigorous <span class="text-white font-medium">System Design</span> principles with modern development workflows.
+                    </p>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">
+                        Whether it's implementing real-time communication via <span class="text-white font-medium">WebSockets</span> or orchestrating multi-tenant architectures, I focus on building systems that are not just functional, but exceptional and secure.
+                    </p>
+</div>
+<div class="col-span-12 md:col-span-5 relative">
+<div class="glass-card aspect-square rounded-3xl overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="abstract architectural close-up of dark glass and metal with cyan neon reflections and sharp geometric lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgqxMLbVVIAnqvWaorZa7nuuKsqNAzK71ue6Bc6ADUeLgXlNdLBdFIUMKZ1nRzV7nHmiXMtNCK3a9oO6shyBnq8h26-tRp_lIFKBrjawJEJhTgF101MQU1fUWU8P2pOpNKXYUJSVlnl127Jcqexk6KBHwqZ1l8niCdp-DRNjCyUw1T05FH7ICKdD57m1xqNWkw83uqb8KBOAAKALqSMl60jcp4-udtToNHvuVJOdeymTyVcPzpzN7k4Cxpt32qlRlgW15KZlwCFQ8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+</div>
+<div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl hidden md:block border-primary-container/20">
+<p class="font-headline text-3xl font-bold text-primary-container">SaaS</p>
+<p class="text-sm text-slate-400">Core Expertise</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-32 px-6 reveal" id="skills">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<h2 class="font-headline text-4xl md:text-5xl font-bold">
+<span class="text-primary-container">02.</span> CORE STACK
+                    </h2>
+<p class="text-on-surface-variant max-w-md">Precision-engineered tools for modern web applications.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+<!-- Skill Cards -->
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-primary-container/40 transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="javascript">javascript</span>
+<span class="font-label font-medium uppercase tracking-widest text-xs">JavaScript (ES6+)</span>
+</div>
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-primary-container/40 transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="terminal">terminal</span>
+<span class="font-label font-medium uppercase tracking-widest text-xs">TypeScript</span>
+</div>
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-primary-container/40 transition-all group lg:col-span-1">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="integration_instructions">integration_instructions</span>
+<span class="font-label font-medium uppercase tracking-widest text-xs">React/Next.js</span>
+</div>
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-primary-container/40 transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="database">database</span>
+<span class="font-label font-medium uppercase tracking-widest text-xs">MongoDB/MySQL</span>
+</div>
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-primary-container/40 transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="cloud">cloud</span>
+<span class="font-label font-medium uppercase tracking-widest text-xs">AWS S3</span>
+</div>
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-primary-container/40 transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="payments">payments</span>
+<span class="font-label font-medium uppercase tracking-widest text-xs">Stripe/Razorpay</span>
+</div>
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-primary-container/40 transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="lan">lan</span>
+<span class="font-label font-medium uppercase tracking-widest text-xs">Node/Express</span>
+</div>
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-primary-container/40 transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="code">code</span>
+<span class="font-label font-medium uppercase tracking-widest text-xs">Python</span>
+</div>
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-primary-container/40 transition-all group col-span-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="settings_ethernet">settings_ethernet</span>
+<span class="font-label font-medium uppercase tracking-widest text-xs">JWT/Auth/WebSockets</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Timeline -->
+<section class="py-32 px-6 bg-surface-container-low reveal">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-16">
+<span class="text-primary-container">03.</span> EXPERIENCE
+                </h2>
+<div class="space-y-12">
+<!-- Exp 1 -->
+<div class="relative pl-12 border-l border-outline-variant/30 pb-12">
+<div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary-container shadow-[0_0_15px_rgba(0,240,255,0.6)]"></div>
+<div class="glass-card p-8 rounded-2xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+<h3 class="text-2xl font-bold text-white">Appic Softwares, Jaipur</h3>
+<span class="text-primary-container font-mono text-sm px-3 py-1 bg-primary-container/10 rounded-full">Apr 2025 – Present</span>
+</div>
+<h4 class="text-lg font-medium text-secondary mb-4">Full Stack Developer — Locumize Project</h4>
+<ul class="space-y-3 text-on-surface-variant">
+<li class="flex gap-3"><span class="text-primary-container">▹</span> Developing Locumize, a SaaS marketplace with complex onboarding workflows and multi-role authentication.</li>
+<li class="flex gap-3"><span class="text-primary-container">▹</span> Integrated Stripe and QuickBooks for payments, invoicing, and reliable financial payouts.</li>
+<li class="flex gap-3"><span class="text-primary-container">▹</span> Implemented WebSockets for real-time communication and built scheduling, time-tracking, and document management features.</li>
+</ul>
+</div>
+</div>
+<!-- Exp 2 -->
+<div class="relative pl-12 border-l border-outline-variant/30">
+<div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-surface-container-highest border border-outline-variant"></div>
+<div class="glass-card p-8 rounded-2xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+<h3 class="text-2xl font-bold text-white">Ethnus</h3>
+<span class="text-slate-500 font-mono text-sm px-3 py-1 bg-white/5 rounded-full">May 2023 – Jul 2023</span>
+</div>
+<h4 class="text-lg font-medium text-secondary mb-4">MERN Stack Intern</h4>
+<ul class="space-y-3 text-on-surface-variant">
+<li class="flex gap-3"><span class="text-primary-container">▹</span> Developed a Job Portal application using the MERN stack in a collaborative team environment.</li>
+<li class="flex gap-3"><span class="text-primary-container">▹</span> Built responsive frontend components and managed application state efficiently.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-32 px-6 reveal" id="projects">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-16">
+<span class="text-primary-container">04.</span> FEATURED WORK
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="group relative bg-surface-container rounded-3xl overflow-hidden border border-outline-variant/10">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="sleek professional dashboard interface showing data visualizations and financial metrics with a dark minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9VKcxrCFw8x_soYWbrQsqlqxbNFTlbgJZk-N0LrInpMltercdo4EYBNWG15FDDe4gn65ARV-CWFo-oysK-PGzvy5gspvNmSOpiwDHbBaRRHsDYsDWeZErphqyjybX53sYCU4cHEHBd9pEWPVMn1ursUQJOSKw_WyIarkcfAYUnNdkxDIPCtMsF4gIPb52GeyPO1lB8R6mtfNLYDooIeRAcxowKG9DHb-uWxZH4KfhioMcDxtQV1kUvzRAURW87q7TvnHeDgIjPTE"/>
+<div class="absolute inset-0 bg-primary-container/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-4">
+<span class="bg-primary-container/10 text-primary-container text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full">Multi-tenant SaaS</span>
+<span class="bg-secondary-container/10 text-secondary-container text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full">Security</span>
+</div>
+<h3 class="text-3xl font-headline font-bold mb-4">CareMagnus</h3>
+<p class="text-on-surface-variant mb-6 line-clamp-2">
+                                Enterprise SaaS platform with micro-frontend architecture, TOTP-based MFA, Socket.io, AWS S3 presigned uploads, and jsPDF reporting.
+                            </p>
+<div class="flex items-center justify-between">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-slate-500" data-icon="hub">hub</span>
+<span class="material-symbols-outlined text-slate-500" data-icon="lock">lock</span>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all" href="#">
+                                    View Project <span class="material-symbols-outlined" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative bg-surface-container rounded-3xl overflow-hidden border border-outline-variant/10">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="modern video streaming interface on a dark screen showing content thumbnails and a search bar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5-6KL9Hi_nSCkfxh9lNunrzwVeZVDtiOreSCOhgPhXO6zGSey3eMnv-k4-lnjk9MSL5LYZMqSCI7CC3tlMpz6//vefMGMrgyCwynpQUBvWveAXnt1LEbTGQ9PfRd_DFFibfFijoEhZwt5UkiLOGbUJypEwzqBLpeRlK6llNP1AR8atYW1dZOyjXgBZGX47uqZjfcyA7o1KnIdexQQRCBRmM1svcrbHAtj1eMDb2kL3DLjJvdBi-j62GuVp8OPDg-obdr-wk_t19ZeA"/>
+<div class="absolute inset-0 bg-primary-container/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-4">
+<span class="bg-primary-container/10 text-primary-container text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full">Backend</span>
+<span class="bg-secondary-container/10 text-secondary-container text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full">Media</span>
+</div>
+<h3 class="text-3xl font-headline font-bold mb-4">YouTube Clone</h3>
+<p class="text-on-surface-variant mb-6 line-clamp-2">
+                                High-performance backend with REST APIs, JWT/Bcrypt auth, Mongoose aggregation pipelines, and Multer/Cloudinary media handling.
+                            </p>
+<div class="flex items-center justify-between">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-slate-500" data-icon="database">database</span>
+<span class="material-symbols-outlined text-slate-500" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all" href="#">
+                                    GitHub Repo <span class="material-symbols-outlined" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education History -->
+<section class="py-32 px-6 bg-surface-container-low reveal" id="education">
+<div class="max-w-4xl mx-auto flex flex-col items-center">
+<span class="material-symbols-outlined text-5xl text-primary-container mb-6" data-icon="school">school</span>
+<h2 class="font-headline text-4xl font-bold mb-12">Academic Foundations</h2>
+<div class="space-y-6 w-full">
+<!-- VIT -->
+<div class="glass-card p-8 rounded-3xl border-primary-container/10 text-left">
+<div class="flex flex-col md:flex-row justify-between mb-4">
+<div>
+<h3 class="text-2xl font-bold text-white">Vellore Institute of Technology</h3>
+<p class="text-primary-container font-medium">B.Tech in Computer Science &amp; Engineering</p>
+</div>
+<div class="text-right">
+<p class="text-white font-bold">7.43 CGPA</p>
+<p class="text-slate-500 text-sm font-mono">Sep 2020 – Jul 2024</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 text-on-surface-variant text-sm font-mono">
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Algorithms</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> System Design</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Distributed Systems</span>
+</div>
+</div>
+<!-- Intermediate -->
+<div class="glass-card p-8 rounded-3xl border-white/5 text-left">
+<div class="flex flex-col md:flex-row justify-between">
+<div>
+<h3 class="text-xl font-bold text-white">Bhartiya Senior Secondary School</h3>
+<p class="text-slate-400">Intermediate / +2</p>
+</div>
+<div class="text-right">
+<p class="text-white font-bold">90.60%</p>
+<p class="text-slate-500 text-sm font-mono">Jul 2019</p>
+</div>
+</div>
+</div>
+<!-- Matriculation -->
+<div class="glass-card p-8 rounded-3xl border-white/5 text-left">
+<div class="flex flex-col md:flex-row justify-between">
+<div>
+<h3 class="text-xl font-bold text-white">Lotus Valley Convent School</h3>
+<p class="text-slate-400">Matriculation</p>
+</div>
+<div class="text-right">
+<p class="text-white font-bold">86.33%</p>
+<p class="text-slate-500 text-sm font-mono">Jul 2017</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-6 relative reveal" id="contact">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline text-5xl font-bold mb-8">GET IN <span class="text-primary-container">TOUCH</span></h2>
+<p class="text-on-surface-variant text-lg mb-12 max-w-md">
+                        I'm open to discussing complex engineering challenges, SaaS architectures, or potential partnership opportunities.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+</div>
+<span class="text-xl">lavneetsharma123@gmail.com</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+</div>
+<span class="text-xl">Jaipur, Rajasthan, India</span>
+</div>
+</div>
+<div class="flex gap-6 mt-16">
+<a class="w-14 h-14 glass-card rounded-full flex items-center justify-center hover:bg-primary-container/10 transition-colors" href="https://github.com/lavneetsh">
+<img alt="GitHub" class="w-6 h-6 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS0MS37QjHJnNeO8kAlaCd9yYAL91E6eL6a28bzKTc4BiIVnQtyz8cFFgme_DylDqfQioioXg4UvZoAy2WoXrRu9j5Yhd7-wO48JatI-f7HnXP7sFJ6v71VmaZktWfNhdSUudWB7eYp9FVdhNEPHbqYclPqbx8LgfUGsQ6T5uL43sfHuYikSsME-Rx7j2xoeT3B5pq19GfomPm-oRSCIXq3FGboFYVcZaFdaz5a1rros941K6OiiElTxS7uayr-0PIDsLy9QsJ-Vg"/>
+</a>
+<a class="w-14 h-14 glass-card rounded-full flex items-center justify-center hover:bg-primary-container/10 transition-colors" href="#">
+<img alt="LinkedIn" class="w-6 h-6 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChxyY9SNwXm49VBC-7n2gYSoTeWNJZ5_q26nMpQJECw7AJSagiVGP60DfGxHwPOyz5MwR1IbhJ_6ELVgRJI8U4XJi7JnVE5pmu2YgvSuSlSQ9QJdg_GDodmHGzRZvq_LZc33bYcyhj8JyH0pVVHqUhZcug7Ij_0IOxqbtuViobWCbAygGcovH8sAx2iT8DtTvVZUIP_jQM7I6pNE5myemIaMUUtZOlK30W0QGm7BzhjjnGujMegZngEq1yjQ9_JB-S_67SL55VN_U"/>
+</a>
+<a class="w-14 h-14 glass-card rounded-full flex items-center justify-center hover:bg-primary-container/10 transition-colors" href="#">
+<img alt="Twitter" class="w-6 h-6 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClwOn1Fqdv_DA5y6Wa6gqZ4aa2qg4IbZAp1hEjg3Z6tIfTA7nMQvEauIhrI-iZ0sxp5X22Bzv7bAWqJauoyRmCAIHrwWYKiyi9uMmkj8sXCcdDLQHyOdn2VtcgULLUF8yCBIhAtxPysyUyjBP0LUBgTVF-2RHGRo7TwX8Cm8cIPmIOKQa4873ndyzYUuJ01uGKi8qQrt4e9euKTXtl2_FWImcqpP82Eo4CX20G-ymfpxePDDR6hEz7HYBt4Mwag9pQeDMnmU-sH1Y"/>
+</a>
+</div>
+</div>
+<div class="glass-card p-10 rounded-3xl border-primary-container/30 relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary-container/5 rounded-full blur-3xl"></div>
+<form class="space-y-8 relative z-10">
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-[0.2em] text-slate-500">Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary-container transition-all py-3 px-0 placeholder:text-slate-700" placeholder="Your Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-[0.2em] text-slate-500">Email</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary-container transition-all py-3 px-0 placeholder:text-slate-700" placeholder="your@email.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-[0.2em] text-slate-500">Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary-container transition-all py-3 px-0 placeholder:text-slate-700" placeholder="How can I help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-4 rounded-xl font-bold flex items-center justify-center gap-2 group transition-all neon-glow">
+                            Send Transmission
+                            <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-white/5 bg-surface dark:bg-[#131313]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="text-lg font-space-grotesk font-bold text-cyan-400">Lavneet Sharma</div>
+<p class="font-inter text-sm tracking-wide text-slate-500">© 2024 Lavneet Sharma. Built with Neon Architect precision.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-cyan-300 transition-colors duration-300 font-inter text-sm tracking-wide" href="https://github.com/lavneetsh">GitHub</a>
+<a class="text-slate-500 hover:text-cyan-300 transition-colors duration-300 font-inter text-sm tracking-wide" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-cyan-300 transition-colors duration-300 font-inter text-sm tracking-wide" href="#">Twitter</a>
+</div>
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-primary-container/10 transition-all text-cyan-400" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="material-symbols-outlined" data-icon="north">north</span>
+</button>
+</div>
+</footer>
+<!-- Scroll Reveal Script -->
+<script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Initial check to show items already in view
+        window.addEventListener("load", reveal);
+    </script>
+</body></html>
