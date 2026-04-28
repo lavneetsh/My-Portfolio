@@ -9,7 +9,7 @@ export default function Navbar() {
       </h1>
 
       <div className="hidden md:flex gap-8">
-        {['Hero', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+        {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
           <Link
             key={item}
             to={item.toLowerCase()}
@@ -22,7 +22,7 @@ export default function Navbar() {
         ))}
       </div>
 
-      <a 
+      <a
         href="https://drive.google.com/file/d/1YXDRgi2Em6rlviHUtnhlpL-F7tDeU9Ve/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"

@@ -26,7 +26,7 @@ export default function Projects() {
               stack: ["React", "Redux Toolkit", "Node.js", "Socket.io", "AWS S3", "Stripe"]
             },
             {
-              title: "YouTube Backend",
+              title: "YouTube Clone Backend",
               icon: "database",
               points: [
                 "Developed a high-performance **REST API ecosystem** featuring secure JWT authentication and optimized data pipelines.",
@@ -52,10 +52,10 @@ export default function Projects() {
               href={project.link || "#"}
               target={project.link ? "_blank" : "_self"}
               rel={project.link ? "noopener noreferrer" : ""}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.2 }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
               whileHover={{ scale: 1.05, y: -10 }}
               className="glass-card p-10 rounded-3xl group cursor-pointer block"
             >

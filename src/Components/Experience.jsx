@@ -14,10 +14,10 @@ export default function Experience() {
 
         <div className="space-y-12">
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.4 }}
             className="glass-card p-10 rounded-3xl relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -42,10 +42,10 @@ export default function Experience() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="glass-card p-10 rounded-3xl relative overflow-hidden group"
           >
             <h3 className="text-3xl font-bold mb-2 text-white/80">Ethnus</h3>

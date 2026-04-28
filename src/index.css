@@ -35,6 +35,8 @@ body {
 @layer components {
   .glass-card {
     @apply bg-surface-container-high/40 backdrop-blur-xl border border-outline-variant/20 shadow-2xl transition-all duration-300;
+    will-change: transform, opacity;
+    transform: translateZ(0);
   }
 
   .glass-card:hover {
