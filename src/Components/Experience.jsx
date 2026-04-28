@@ -28,15 +28,15 @@ export default function Experience() {
             <ul className="text-on-surface-variant leading-relaxed space-y-4 font-light text-sm">
               <li className="flex gap-3">
                 <span className="text-primary-container mt-1">•</span>
-                <span>Architecting **Locumize**, a high-scale SaaS marketplace; engineered modular backend systems, multi-role authentication, and secure onboarding workflows.</span>
+                <span>Architecting Locumize, a high-scale SaaS marketplace; engineered modular backend systems, multi-role authentication, and secure onboarding workflows.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-primary-container mt-1">•</span>
-                <span>Spearheaded financial integrations with **Stripe and QuickBooks**, orchestrating complex payment pipelines, automated invoicing, and payout systems.</span>
+                <span>Implemented secure authentication using TOTP-based MFA (2FA) with QR setup and backup recovery, along with session handling using Axios interceptors.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-primary-container mt-1">•</span>
-                <span>Implemented **WebSockets** for real-time state synchronization, building mission-critical scheduling, time-tracking, and document management systems.</span>
+                <span>Implemented WebSockets for real-time state synchronization, building mission-critical scheduling and payment integration using stripes.</span>
               </li>
             </ul>
           </motion.div>
