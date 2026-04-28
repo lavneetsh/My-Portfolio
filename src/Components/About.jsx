@@ -13,7 +13,7 @@ export default function About() {
               ABOUT <span className="gradient-text">ME</span>
             </h2>
             <p className="text-on-surface-variant text-lg leading-relaxed font-light">
-              I am a Computer Science graduate experienced in building scalable SaaS and full-stack applications using the **MERN stack**.
+              I am a Computer Science graduate experienced in building scalable SaaS and full-stack applications using the MERN stack.
               I have a strong foundation in system design, authentication, and real-time systems, along with cloud integrations like AWS and Stripe.
               I specialize in developing secure, high-performance platforms with multi-tenant architecture and complex workflows.
             </p>
