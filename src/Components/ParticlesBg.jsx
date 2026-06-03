@@ -12,29 +12,29 @@ export default function ParticlesBg() {
       id="tsparticles"
       init={particlesInit}
       options={{
-        fullScreen: { enable: false },
+        fullScreen: { enable: true, zIndex: -10 },
         background: { color: "transparent" },
-        fpsLimit: 120,
+        fpsLimit: 60,
         particles: {
-          number: { value: 60, density: { enable: true, area: 800 } },
+          number: { value: 40, density: { enable: true, area: 900 } },
           color: { value: "#00f0ff" },
           links: {
             enable: true,
-            distance: 150,
+            distance: 140,
             color: "#00f0ff",
-            opacity: 0.1,
+            opacity: 0.08,
             width: 1,
           },
           move: {
             enable: true,
-            speed: 0.8,
+            speed: 0.6,
             direction: "none",
             random: false,
             straight: false,
             outModes: { default: "out" },
           },
           size: { value: { min: 1, max: 2 } },
-          opacity: { value: { min: 0.1, max: 0.3 } },
+          opacity: { value: { min: 0.05, max: 0.2 } },
         },
         interactivity: {
           events: {
@@ -42,12 +42,11 @@ export default function ParticlesBg() {
             resize: true,
           },
           modes: {
-            grab: { distance: 140, links: { opacity: 0.4 } },
+            grab: { distance: 120, links: { opacity: 0.3 } },
           },
         },
-        detectRetina: true,
+        detectRetina: false,
       }}
-      className="absolute inset-0 -z-10 bg-[#0f0f0f]"
     />
   );
 }

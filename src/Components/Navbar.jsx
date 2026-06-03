@@ -9,7 +9,7 @@ export default function Navbar() {
       </h1>
 
       <div className="hidden md:flex gap-8">
-        {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
+        {['About', 'Skills', 'Projects', 'Architecture', 'Contact'].map((item) => (
           <Link
             key={item}
             to={item.toLowerCase()}

@@ -1,24 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CursorGlow() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const mouseX = useMotionValue(-300);
+  const mouseY = useMotionValue(-300);
+
+  // Spring config: stiff enough to feel responsive, damping to avoid jitter
+  const springX = useSpring(mouseX, { stiffness: 120, damping: 20, mass: 0.5 });
+  const springY = useSpring(mouseY, { stiffness: 120, damping: 20, mass: 0.5 });
 
   useEffect(() => {
     const move = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      mouseX.set(e.clientX - 128);
+      mouseY.set(e.clientY - 128);
     };
-    window.addEventListener("mousemove", move);
+    window.addEventListener("mousemove", move, { passive: true });
     return () => window.removeEventListener("mousemove", move);
-  }, []);
+  }, [mouseX, mouseY]);
 
   return (
-    <div
-      className="fixed top-0 left-0 w-64 h-64 pointer-events-none z-50 transition-transform duration-300 ease-out"
-      style={{
-        transform: `translate(${position.x - 128}px, ${position.y - 128}px)`
-      }}
+    <motion.div
+      className="fixed top-0 left-0 w-64 h-64 pointer-events-none z-50"
+      style={{ x: springX, y: springY }}
     >
-      <div className="w-full h-full bg-primary-container/15 rounded-full blur-[80px]"></div>
-    </div>
+      <div className="w-full h-full bg-primary-container/10 rounded-full blur-[80px]" />
+    </motion.div>
   );
 }

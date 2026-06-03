@@ -13,13 +13,21 @@ export default function About() {
               ABOUT <span className="gradient-text">ME</span>
             </h2>
             <p className="text-on-surface-variant text-lg leading-relaxed font-light">
-              I am a Computer Science graduate experienced in building scalable SaaS and full-stack applications using the MERN stack.
-              I have a strong foundation in system design, authentication, and real-time systems, along with cloud integrations like AWS and Stripe.
-              I specialize in developing secure, high-performance platforms with multi-tenant architecture and complex workflows.
+              Full Stack Developer with a CS background, focused on building production-grade 
+              SaaS platforms and AI-powered applications. Currently building{" "}
+              <span className="text-white font-medium">Damora AI</span> — a multi-tenant 
+              knowledge management platform with RAG pipelines, vector search, and BYOK security.
             </p>
-            <div className="mt-8 flex gap-4">
-              <div className="glass-card px-4 py-2 rounded-lg text-xs font-bold text-primary uppercase tracking-widest">React Developer</div>
-              <div className="glass-card px-4 py-2 rounded-lg text-xs font-bold text-secondary uppercase tracking-widest">Full Stack Developer</div>
+            <p className="text-on-surface-variant text-lg leading-relaxed font-light mt-4">
+              I specialize in{" "}
+              <span className="text-white font-medium">Next.js, NestJS, TypeScript</span>, 
+              distributed systems, LLM integrations, and secure multi-tenant architectures. 
+              I care deeply about clean code, developer experience, and shipping things that scale.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <div className="glass-card px-4 py-2 rounded-lg text-xs font-bold text-primary uppercase tracking-widest">AI / LLM</div>
+              <div className="glass-card px-4 py-2 rounded-lg text-xs font-bold text-secondary uppercase tracking-widest">Full Stack</div>
+              <div className="glass-card px-4 py-2 rounded-lg text-xs font-bold text-primary-container uppercase tracking-widest">SaaS Builder</div>
             </div>
           </div>
 
