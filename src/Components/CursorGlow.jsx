@@ -23,7 +23,7 @@ export default function CursorGlow() {
       className="fixed top-0 left-0 w-64 h-64 pointer-events-none z-50"
       style={{ x: springX, y: springY }}
     >
-      <div className="w-full h-full bg-primary-container/10 rounded-full blur-[80px]" />
+      <div className="w-full h-full bg-cyan-500/5 rounded-full blur-[90px]" />
     </motion.div>
   );
 }

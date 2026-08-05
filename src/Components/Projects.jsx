@@ -1,232 +1,143 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import Reveal from './Reveal';
 
-const FILTERS = ["All", "SaaS", "AI/ML", "Backend", "CMS"];
-
-const projects = [
+const PROJECTS = [
   {
     title: "Damora AI",
-    category: "AI/ML",
-    tags: ["SaaS", "AI/ML"],
+    category: "Enterprise AI Knowledge Platform",
     featured: true,
     icon: "hub",
-    link: null,
-    github: null,
-    badge: "Featured Project",
-    categoryBadges: ["Enterprise AI", "Full Stack", "SaaS"],
-    description:
-      "Multi-tenant AI knowledge management platform with RAG pipelines, semantic search, OCR, BYOK security, role-based access control, and workspace analytics.",
+    link: "https://damora-ai-web.vercel.app/",
+    github: "https://github.com/lavneetsh",
+    badge: "Flagship Production System",
+    description: "Multi-tenant SaaS AI platform featuring RAG pipelines, async OCR document ingestion via Redis BullMQ, Qdrant vector search, BYOK AES-256 encryption, and SSE token streaming.",
     points: [
-      "Built **RAG pipeline** with Qdrant vector DB, MinIO storage, and Gemini AI for workspace-scoped semantic search and document Q&A.",
-      "Implemented **BYOK (Bring Your Own Key)** with AES-256-CBC encryption, supporting Gemini, OpenAI, and Anthropic Claude.",
-      "Designed **Multi-Tenant RBAC** — Owner, Admin, Member roles with workspace-isolated data, analytics, and AI quotas.",
+      "Built **RAG pipeline** with Qdrant vector DB, MinIO storage, and Gemini AI for workspace-scoped document Q&A.",
+      "Engineered **Async OCR ingestion queues** using Redis BullMQ and Tesseract to handle 50+ page PDFs without HTTP timeouts.",
+      "Implemented **BYOK (Bring Your Own Key)** with AES-256-CBC encryption and row-level multi-tenant RBAC isolation."
     ],
     metrics: [
-      { label: "User Roles", value: "3" },
-      { label: "Multi-Tenant", value: "✓" },
-      { label: "APIs", value: "10+" },
-      { label: "Infra Services", value: "6+" },
+      { label: "Query Latency", value: "287ms" },
+      { label: "Vector Search", value: "Qdrant" },
+      { label: "Async Queue", value: "BullMQ" },
+      { label: "Deployment", value: "Live" }
     ],
-    stack: ["Next.js", "NestJS", "PostgreSQL", "Redis", "Qdrant", "MinIO", "Gemini AI", "TypeScript"],
+    stack: ["Next.js 14", "NestJS", "PostgreSQL", "Redis", "Qdrant DB", "BullMQ", "Gemini AI", "TypeScript"]
   },
   {
     title: "CareMagnus",
-    category: "SaaS",
-    tags: ["SaaS"],
-    icon: "hub",
+    category: "Enterprise Multi-Tenant SaaS",
+    icon: "business",
     link: "https://caremagnus.com/",
+    description: "Production multi-tenant SaaS platform for healthcare management with hierarchical organization scoping, TOTP 2FA security, AWS S3 presigned upload pipelines, and Stripe payments.",
     points: [
-      "Architected a scalable **multi-tenant SaaS platform** with micro-frontend architecture, supporting complex hierarchical site management.",
-      "Engineered high-security **TOTP-based MFA** (2FA) and backup recovery systems with automated session handling.",
-      "Integrated **WebSockets**, **AWS S3 presigned uploads**, and dynamic **Stripe** payment pipelines for real-time care management.",
+      "Architected multi-tenant site isolation with custom role hierarchies and permission guards.",
+      "Engineered high-security **TOTP multi-factor authentication (2FA)** and single-use recovery code pipelines.",
+      "Integrated **WebSockets** for live patient alerts and **AWS S3 presigned URLs** to reduce server memory load."
     ],
-    stack: ["React", "Redux Toolkit", "Node.js", "Socket.io", "AWS S3", "Stripe"],
+    stack: ["React", "Redux Toolkit", "Node.js", "Socket.io", "AWS S3", "Stripe", "Express"]
   },
   {
-    title: "YouTube Clone Backend",
-    category: "Backend",
-    tags: ["Backend"],
-    icon: "database",
-    points: [
-      "Developed a high-performance **REST API ecosystem** featuring secure JWT authentication and optimized data pipelines.",
-      "Leveraged **Mongoose aggregation frameworks** for advanced analytics and handled multi-part file processing via **Cloudinary**.",
-      "Implemented secure media storage and automated metadata extraction workflows for scalable video streaming.",
-    ],
-    stack: ["Node.js", "Express", "MongoDB", "Cloudinary", "Multer"],
-  },
-  {
-    title: "Blog CMS",
-    category: "CMS",
-    tags: ["CMS"],
+    title: "Full-Stack Blog CMS",
+    category: "Content Engine",
     icon: "edit_note",
     link: "https://blog-website-delta-five.vercel.app/",
+    description: "High-performance Full-Stack CMS featuring real-time Firebase synchronization, rich text post editor, client state caching, and responsive UI design.",
     points: [
-      "Built a high-performance **Full-Stack CMS** with integrated post management, real-time Firestore synchronization, and secure Firebase authentication.",
-      "Leveraged **Firebase Storage** for high-availability media management and optimized data retrieval via Redux Toolkit.",
-      "Developed a highly responsive and performant UI using **Tailwind CSS**, ensuring a seamless content creation experience across all devices.",
+      "Leveraged **Firebase Firestore** real-time listeners for instant post updates across clients.",
+      "Implemented **Redux Toolkit** state slice caching for rapid route navigation and optimistic UI updates.",
+      "Styled with **Tailwind CSS** for a clean, responsive content management experience."
     ],
-    stack: ["React", "Redux Toolkit", "Firebase", "Tailwind CSS"],
-  },
+    stack: ["React", "Redux Toolkit", "Firebase Firestore", "Firebase Storage", "Tailwind CSS"]
+  }
 ];
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState("All");
-
-  const visible =
-    activeFilter === "All"
-      ? projects
-      : projects.filter((p) => p.tags?.includes(activeFilter));
-
   return (
-    <section id="projects" className="py-32 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="other-projects" className="py-24 px-6 relative">
+      <div className="max-w-7xl mx-auto space-y-12">
         <Reveal>
-          <h2 className="text-5xl font-bold font-headline mb-4 tracking-tight text-center">
-            04. <span className="gradient-text uppercase">Projects</span>
-          </h2>
-          <p className="text-on-surface-variant text-center mb-12 text-sm uppercase tracking-widest">
-            Things I've shipped that solve real problems
-          </p>
-        </Reveal>
-
-        {/* Filter Chips */}
-        <Reveal>
-          <div className="flex flex-wrap justify-center gap-3 mb-16">
-            {FILTERS.map((f) => (
-              <button
-                key={f}
-                onClick={() => setActiveFilter(f)}
-                className={`px-5 py-2 rounded-full text-xs font-mono uppercase tracking-widest border transition-all duration-200 ${
-                  activeFilter === f
-                    ? "bg-primary-container text-black border-primary-container shadow-primary-container/20 shadow-lg"
-                    : "border-white/10 text-on-surface-variant hover:border-primary-container/40 hover:text-primary-container"
-                }`}
-              >
-                {f}
-              </button>
-            ))}
+          <div className="flex flex-col items-center text-center space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-mono uppercase tracking-widest">
+              DEPLOYED PRODUCTION SYSTEMS
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold font-headline text-white">
+              Featured <span className="gradient-text">Production Projects</span>
+            </h2>
+            <p className="text-zinc-400 text-sm max-w-xl font-light">
+              Real-world deployed web applications & platforms that demonstrate full-stack engineering capability and system architecture.
+            </p>
           </div>
         </Reveal>
 
-        {/* Projects Grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeFilter}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="grid md:grid-cols-2 gap-10"
-          >
-            {visible.map((project, i) => (
+        <div className="grid md:grid-cols-3 gap-6">
+          {PROJECTS.map((p, idx) => (
+            <Reveal key={idx}>
               <motion.div
-                key={project.title}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
-                whileHover={{ scale: 1.03, y: -6 }}
-                className={`glass-card p-10 rounded-3xl group cursor-pointer relative overflow-hidden ${
-                  project.featured
-                    ? "md:col-span-2 border border-primary-container/20 shadow-primary-container/10 shadow-xl"
-                    : ""
+                whileHover={{ y: -6 }}
+                className={`bg-[#0f111a] border rounded-2xl p-6 flex flex-col justify-between h-full space-y-6 transition-all duration-200 ${
+                  p.featured
+                    ? "border-cyan-500/40 shadow-xl shadow-cyan-500/5 bg-gradient-to-b from-[#111524] to-[#0f111a]"
+                    : "border-white/10 hover:border-cyan-500/30"
                 }`}
-                onClick={() => project.link && window.open(project.link, "_blank")}
               >
-                {/* Featured shimmer border */}
-                {project.featured && (
-                  <div className="absolute inset-0 rounded-3xl pointer-events-none bg-gradient-to-br from-primary-container/5 via-transparent to-secondary-container/5" />
-                )}
-
-                {/* Badge row */}
-                <div className="flex flex-wrap items-center gap-3 mb-6">
-                  {project.badge && (
-                    <span className="px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest bg-primary-container text-black font-bold">
-                      ⭐ {project.badge}
-                    </span>
-                  )}
-                  {(project.categoryBadges || [project.category]).map((b, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest border border-primary-container/30 text-primary-container"
-                    >
-                      {b}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Icon + Title */}
-                <div className="flex items-center gap-5 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container/10 transition-colors flex-shrink-0">
-                    <span className="material-symbols-outlined text-3xl text-primary-container">
-                      {project.icon}
+                <div className="space-y-4">
+                  {/* Badge & Category */}
+                  <div className="flex items-center justify-between">
+                    <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                      <span className="material-symbols-outlined text-xl">{p.icon}</span>
+                    </div>
+                    <span className="text-[10px] font-mono text-cyan-400 uppercase bg-cyan-500/10 border border-cyan-500/20 px-2 py-1 rounded">
+                      {p.category}
                     </span>
                   </div>
-                  <h3 className="text-3xl font-bold tracking-tight">{project.title}</h3>
+
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{p.title}</h3>
+                    <p className="text-xs text-zinc-300 leading-relaxed font-light">{p.description}</p>
+                  </div>
+
+                  {/* Highlights */}
+                  <ul className="space-y-2 text-xs text-zinc-300 font-light">
+                    {p.points.map((pt, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-cyan-400 font-bold">•</span>
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: pt.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>')
+                          }}
+                        />
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                {project.description && (
-                  <p className="text-on-surface-variant text-sm mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-                )}
-
-                {/* Metrics for featured */}
-                {project.metrics && (
-                  <div className="grid grid-cols-4 gap-4 mb-8">
-                    {project.metrics.map((m, idx) => (
-                      <div
-                        key={idx}
-                        className="rounded-xl border border-primary-container/15 bg-primary-container/5 p-4 text-center"
-                      >
-                        <div className="text-2xl font-bold gradient-text font-headline">{m.value}</div>
-                        <div className="text-[10px] uppercase tracking-widest text-on-surface-variant mt-1">
-                          {m.label}
-                        </div>
-                      </div>
+                <div className="space-y-4 pt-4 border-t border-white/10">
+                  <div className="flex flex-wrap gap-1.5">
+                    {p.stack.map((s, i) => (
+                      <span key={i} className="text-[10px] font-mono bg-white/5 border border-white/10 text-zinc-300 px-2 py-0.5 rounded">
+                        {s}
+                      </span>
                     ))}
                   </div>
-                )}
 
-                {/* Bullet Points */}
-                <ul className="text-on-surface-variant text-sm leading-relaxed font-light mb-8 space-y-4">
-                  {project.points.map((pt, idx) => (
-                    <li key={idx} className="flex gap-3">
-                      <span className="text-primary-container mt-1">•</span>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: pt.replace(
-                            /\*\*(.*?)\*\*/g,
-                            '<strong class="text-white">$1</strong>'
-                          ),
-                        }}
-                      />
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Stack Tags */}
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {project.stack.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="text-[10px] font-mono uppercase tracking-widest text-slate-500 bg-white/5 px-2 py-1 rounded"
+                  {p.link && (
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2.5 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-black font-bold text-xs uppercase tracking-widest transition-transform hover:scale-105 inline-flex items-center gap-2 shadow-lg shadow-cyan-400/20"
                     >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* CTA */}
-                <div className="flex items-center gap-2 text-primary-container text-xs uppercase font-bold tracking-widest">
-                  {project.link ? "Visit Live Project" : "System Overview"}
-                  <span className="material-symbols-outlined text-sm">arrow_right_alt</span>
+                      <span>Visit Live System</span>
+                      <span className="material-symbols-outlined text-sm">open_in_new</span>
+                    </a>
+                  )}
                 </div>
               </motion.div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

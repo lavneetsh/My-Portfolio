@@ -2,73 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Your custom styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #131313;
-  color: white;
+  background-color: #090a0f;
+  color: #f3f4f6;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 @layer base {
   * {
-    @apply border-outline-variant/20;
+    border-color: rgba(255, 255, 255, 0.08);
     scroll-behavior: smooth;
   }
   
   body {
-    @apply bg-background text-on-background font-body antialiased selection:bg-primary-container selection:text-on-primary-container;
+    @apply bg-[#090a0f] text-zinc-100 font-body antialiased selection:bg-cyan-500/20 selection:text-cyan-300;
     margin: 0;
     overflow-x: hidden;
   }
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #00f0ff, #8b5cf6);
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.4), rgba(129, 140, 248, 0.1), rgba(192, 132, 252, 0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 @layer components {
   .glass-card {
-    @apply bg-surface-container-high/40 backdrop-blur-xl border border-outline-variant/20 shadow-2xl transition-all duration-300;
-    will-change: transform, opacity;
-    transform: translateZ(0);
+    background: rgba(15, 17, 26, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.25s ease-in-out;
   }
 
   .glass-card:hover {
-    box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
-    @apply border-primary-container/30;
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 12px 40px 0 rgba(56, 189, 248, 0.1);
   }
 
-  .neon-glow {
-    @apply transition-all duration-300;
-  }
-  
-  .neon-glow:hover {
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+  .glass-card-static {
+    background: rgba(15, 17, 26, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-surface-container-lowest;
+  background: #090a0f;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00f0ff, #d0bcff); 
-  @apply rounded-full;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #7df4ff, #e9ddff); 
+  background: rgba(56, 189, 248, 0.4);
 }
 
-/* Animated 背景效果 */
-.bg-blob {
-  @apply absolute rounded-full blur-[120px] pointer-events-none;
+/* Code block highlight styling */
+pre, code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
 }
+

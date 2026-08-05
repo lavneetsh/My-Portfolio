@@ -1,49 +1,46 @@
 import React from 'react';
-import { motion } from "framer-motion";
-import Reveal from "./Reveal";
-import profileImg from "../assets/Profile pic.png";
+import Reveal from './Reveal';
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-6 bg-[#1c1b1b] relative overflow-hidden">
-      <Reveal>
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-headline tracking-tight">
-              ABOUT <span className="gradient-text">ME</span>
-            </h2>
-            <p className="text-on-surface-variant text-lg leading-relaxed font-light">
-              Full Stack Developer with a CS background, focused on building production-grade 
-              SaaS platforms and AI-powered applications. Currently building{" "}
-              <span className="text-white font-medium">Damora AI</span> — a multi-tenant 
-              knowledge management platform with RAG pipelines, vector search, and BYOK security.
-            </p>
-            <p className="text-on-surface-variant text-lg leading-relaxed font-light mt-4">
-              I specialize in{" "}
-              <span className="text-white font-medium">Next.js, NestJS, TypeScript</span>, 
-              distributed systems, LLM integrations, and secure multi-tenant architectures. 
-              I care deeply about clean code, developer experience, and shipping things that scale.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <div className="glass-card px-4 py-2 rounded-lg text-xs font-bold text-primary uppercase tracking-widest">AI / LLM</div>
-              <div className="glass-card px-4 py-2 rounded-lg text-xs font-bold text-secondary uppercase tracking-widest">Full Stack</div>
-              <div className="glass-card px-4 py-2 rounded-lg text-xs font-bold text-primary-container uppercase tracking-widest">SaaS Builder</div>
+    <section id="about" className="py-20 px-6 relative">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <Reveal>
+          <div className="bg-[#0f111a] border border-white/10 rounded-2xl p-8 md:p-12 space-y-6">
+            <div className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-cyan-400 text-2xl">person</span>
+              <h2 className="text-2xl md:text-3xl font-bold font-headline text-white">
+                Technical Profile & Capabilities
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 pt-2 text-xs leading-relaxed text-zinc-300 font-light">
+              <div className="bg-white/5 border border-white/5 rounded-xl p-5 space-y-2">
+                <span className="text-cyan-400 font-mono font-bold uppercase text-[11px]">1. WHAT I BUILD</span>
+                <p>
+                  Production-grade backend architectures, multi-tenant SaaS systems, async background pipelines, and high-performance RAG knowledge retrieval platforms.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/5 rounded-xl p-5 space-y-2">
+                <span className="text-indigo-400 font-mono font-bold uppercase text-[11px]">2. PROBLEMS I SOLVE</span>
+                <p>
+                  Data isolation across tenants, vector search retrieval latency, LLM hallucination mitigation, non-blocking heavy document processing, and zero-trust key management.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/5 rounded-xl p-5 space-y-2">
+                <span className="text-purple-400 font-mono font-bold uppercase text-[11px]">3. ROLES TARGETED</span>
+                <p className="font-semibold text-white">
+                  • AI Engineer<br />
+                  • Backend Software Engineer<br />
+                  • Full Stack Systems Engineer
+                </p>
+              </div>
             </div>
           </div>
-
-          <motion.div
-            whileHover={{ rotate: 5, scale: 1.05 }}
-            className="w-64 h-64 glass-card rounded-3xl relative overflow-hidden group flex items-center justify-center border-primary-container/20 shadow-primary-container/10 shadow-2xl"
-          >
-            <img
-              src={profileImg}
-              alt="Lavneet Sharma"
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary-container/10 to-transparent pointer-events-none"></div>
-          </motion.div>
-        </div>
-      </Reveal>
+        </Reveal>
+      </div>
     </section>
   );
 }
