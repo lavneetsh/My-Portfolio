@@ -5,7 +5,7 @@ const EXPERIENCES = [
   {
     role: "Lead Architect & AI Engineer",
     company: "Damora AI (Enterprise Knowledge Engine)",
-    period: "2024 - Present",
+    period: "2025 - Present",
     type: "Production Platform",
     impacts: [
       "Designed & shipped an **Enterprise AI Knowledge Platform** using NestJS, Next.js, Qdrant vector database, and BullMQ async queues.",
@@ -18,7 +18,7 @@ const EXPERIENCES = [
   {
     role: "Full Stack Software Engineer",
     company: "CareMagnus (Enterprise SaaS Platform)",
-    period: "2023 - 2024",
+    period: "2025 - 2026",
     type: "Production Experience",
     impacts: [
       "Architected multi-tenant hierarchical organization scoping supporting multi-branch healthcare management.",

@@ -17,7 +17,7 @@ export default function Footer() {
           <a href="mailto:lavneetsharma.work@gmail.com" className="hover:text-cyan-400 transition-colors">
             Email
           </a>
-          <a href="https://drive.google.com/file/d/1YXDRgi2Em6rlviHUtnhlpL-F7tDeU9Ve/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
+          <a href="https://drive.google.com/file/d/19n8tX8DkYA7ejr3ney7WM2HAsuJm20NI/view" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
             Resume
           </a>
         </div>

@@ -36,7 +36,7 @@ export default function Navbar() {
       </div>
 
       <a
-        href="https://drive.google.com/file/d/1YXDRgi2Em6rlviHUtnhlpL-F7tDeU9Ve/view?usp=sharing"
+        href="https://drive.google.com/file/d/19n8tX8DkYA7ejr3ney7WM2HAsuJm20NI/view"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-cyan-400 text-black px-4 py-2 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-cyan-300 transition-colors flex items-center justify-center cursor-pointer shadow-lg shadow-cyan-400/20"

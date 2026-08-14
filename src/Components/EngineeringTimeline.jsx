@@ -19,7 +19,7 @@ const TIMELINE_STEPS = [
     tags: ["React", "Node.js", "Express", "MongoDB", "Redux"]
   },
   {
-    year: "2024",
+    year: "2025",
     title: "Enterprise SaaS Engineering",
     sub: "CareMagnus Platform",
     desc: "Architected multi-tenant SaaS features, TOTP-based 2FA, WebSocket updates, AWS S3 presigned file pipelines, and Stripe payment processing.",
@@ -27,7 +27,7 @@ const TIMELINE_STEPS = [
     tags: ["CareMagnus", "Multi-Tenant", "WebSockets", "AWS S3", "Stripe"]
   },
   {
-    year: "2024 - 2025",
+    year: "2025 - Present",
     title: "Enterprise AI Systems Builder",
     sub: "Damora AI Flagship Platform",
     desc: "Designed and built Damora AI monorepo with NestJS, Next.js, Qdrant vector DB, BullMQ async OCR queues, BYOK AES encryption, and SSE streaming.",
